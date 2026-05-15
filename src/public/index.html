@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="light">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Competição Legal</title>
+</head>
+<body>
+    <div id="container">
+        
+        <header>
+            <h1>Competição Legal</h1>
+        </header>
+
+        <div id="switch">
+            <button></button>
+            <span></span>
+        </div>
+
+        <main>
+            <section id="downloads">
+                <h2>Documentação e Libs</h2>
+                <div class="grid-links">
+                    <a href="/p1.pdf" download>Problema 1</a>
+                    <a href="/p2.pdf" download>Problema 2</a>
+                    <a href="/p3.pdf" download>Problema 3</a>
+                    <a href="/cs50.zip" download class="lib-link">Download Libs CS50</a>
+                </div>
+            </section>
+
+            <section id="upload-section">
+                <h2>Submeter Solução</h2>
+                <form id="uploadForm">
+                    <div class="input-group">
+                        <label for="aluno">Nome</label>
+                        <input type="text" id="aluno" name="aluno" placeholder="Seu nome" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="problema">Problema:</label>
+                        <select id="problema" name="problema" required>
+                            <option value="" disabled selected>Selecione...</option>
+                            <option value="p1">Problema 1</option>
+                            <option value="p2">Problema 2</option>
+                            <option value="p3">Problema 3</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="arquivo">Código Fonte (.c)</label>
+                        <input type="file" id="arquivo" name="arquivo" accept=".c" required>
+                    </div>
+
+                    <button type="submit" id="btn-enviar">ENVIAR PARA DAVIZERA</button>
+                    <p id="status-message"></p>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            Feito com muito love
+        </footer>
+    </div>
+
+    <script src="beauty.js"></script>
+    <script src="form.js"></script>
+</body>
+</html>
