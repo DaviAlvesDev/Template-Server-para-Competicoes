@@ -16,10 +16,12 @@ import time
 
 CONFIG_PROBLEMAS = {
     "p1": {
+        "pontos": 20,
         "input_modo": "linhas_fixas",   "input_linhas": 1, # Ex: L,D e K,P
         "output_modo": "linhas_fixas",  "output_linhas": 1 # 1 linha de resposta
     },
     "p2": {
+        "pontos": 30,
         "input_modo": "matriz_dinamica",   
         "input_indice_m": 0, 
         "input_linhas_extras": 0,
@@ -27,6 +29,7 @@ CONFIG_PROBLEMAS = {
         "output_modo": "linhas_fixas",  "output_linhas": 1 # 1 linha de resposta
     },
     "p3": {
+        "pontos": 50,
         # Ex: Robô no labirinto M x N com C comandos
         "input_modo": "matriz_dinamica",
         "input_indice_m": 0,       # O número M está na posição 0 da primeira linha
@@ -183,7 +186,7 @@ def executar_check():
 
     print("\n" + "="*40)
     if passou_em_todos:
-        print(f"{COR_VERDE}▶ PARABÉNS! O ALUNO PASSOU EM TODOS OS {len(casos_teste)} TESTES!{COR_RESET}")
+        print(f"{COR_VERDE}▶ PARABÉNS! O ALUNO PASSOU EM TODOS OS {len(casos_teste)} TESTES! +{CONFIG_PROBLEMAS[id_problema]['pontos']} pontos!{COR_RESET}")
         print(f"Tempo de execução do teste mais lento: {tempo_maximo:.4f} segundos.")
     else:
         print(f"{COR_VERMELHO}▶ O ALUNO NÃO PASSOU.{COR_RESET}")
