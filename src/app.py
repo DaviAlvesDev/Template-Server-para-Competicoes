@@ -48,6 +48,7 @@ def upload():
         # Salva na pasta raiz/submissoes/pX/
         save_path = os.path.join(BASE_SUBMISSIONS, problema, filename)
         file.save(save_path)
+        print(f"Arquvo enviado: {filename}")
         return jsonify({
             "mensagem": f"Código para {problema} enviado com sucesso!", 
             "arquivo": filename
